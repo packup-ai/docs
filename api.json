@@ -1,0 +1,1508 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "standard public schema",
+        "title": "PostgREST API",
+        "version": "10.2.0 (e07807d)"
+    },
+    "host": "api.packup.ai",
+    "basePath": "/",
+    "schemes": [
+        "https"
+    ],
+    "consumes": [
+        "application/json",
+        "application/vnd.pgrst.object+json",
+        "text/csv"
+    ],
+    "produces": [
+        "application/json",
+        "application/vnd.pgrst.object+json",
+        "text/csv"
+    ],
+    "paths": {
+        "/version_members": {
+            "get": {
+                "tags": [
+                    "version_members"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/rowFilter.version_members.id"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.version_members.version_id"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.version_members.member_id"
+                    },
+                    {
+                        "$ref": "#/parameters/select"
+                    },
+                    {
+                        "$ref": "#/parameters/order"
+                    },
+                    {
+                        "$ref": "#/parameters/range"
+                    },
+                    {
+                        "$ref": "#/parameters/rangeUnit"
+                    },
+                    {
+                        "$ref": "#/parameters/offset"
+                    },
+                    {
+                        "$ref": "#/parameters/limit"
+                    },
+                    {
+                        "$ref": "#/parameters/preferCount"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "items": {
+                                "$ref": "#/definitions/version_members"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    "206": {
+                        "description": "Partial Content"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "version_members"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/body.version_members"
+                    },
+                    {
+                        "$ref": "#/parameters/select"
+                    },
+                    {
+                        "$ref": "#/parameters/preferPost"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "version_members"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/rowFilter.version_members.id"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.version_members.version_id"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.version_members.member_id"
+                    },
+                    {
+                        "$ref": "#/parameters/preferReturn"
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "version_members"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/rowFilter.version_members.id"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.version_members.version_id"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.version_members.member_id"
+                    },
+                    {
+                        "$ref": "#/parameters/body.version_members"
+                    },
+                    {
+                        "$ref": "#/parameters/preferReturn"
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                }
+            }
+        },
+        "/members": {
+            "get": {
+                "tags": [
+                    "members"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/rowFilter.members.id"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.members.name"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.members.type"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.members.parent_name"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.members.documentation"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.members.signature"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.members.parameters"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.members.return"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.members.access_level"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.members.depth"
+                    },
+                    {
+                        "$ref": "#/parameters/select"
+                    },
+                    {
+                        "$ref": "#/parameters/order"
+                    },
+                    {
+                        "$ref": "#/parameters/range"
+                    },
+                    {
+                        "$ref": "#/parameters/rangeUnit"
+                    },
+                    {
+                        "$ref": "#/parameters/offset"
+                    },
+                    {
+                        "$ref": "#/parameters/limit"
+                    },
+                    {
+                        "$ref": "#/parameters/preferCount"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "items": {
+                                "$ref": "#/definitions/members"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    "206": {
+                        "description": "Partial Content"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "members"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/body.members"
+                    },
+                    {
+                        "$ref": "#/parameters/select"
+                    },
+                    {
+                        "$ref": "#/parameters/preferPost"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "members"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/rowFilter.members.id"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.members.name"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.members.type"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.members.parent_name"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.members.documentation"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.members.signature"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.members.parameters"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.members.return"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.members.access_level"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.members.depth"
+                    },
+                    {
+                        "$ref": "#/parameters/preferReturn"
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "members"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/rowFilter.members.id"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.members.name"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.members.type"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.members.parent_name"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.members.documentation"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.members.signature"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.members.parameters"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.members.return"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.members.access_level"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.members.depth"
+                    },
+                    {
+                        "$ref": "#/parameters/body.members"
+                    },
+                    {
+                        "$ref": "#/parameters/preferReturn"
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                }
+            }
+        },
+        "/packages": {
+            "get": {
+                "tags": [
+                    "packages"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/rowFilter.packages.id"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.packages.name"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.packages.description"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.packages.maintainers"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.packages.project_url"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.packages.doc_url"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.packages.latest_version"
+                    },
+                    {
+                        "$ref": "#/parameters/select"
+                    },
+                    {
+                        "$ref": "#/parameters/order"
+                    },
+                    {
+                        "$ref": "#/parameters/range"
+                    },
+                    {
+                        "$ref": "#/parameters/rangeUnit"
+                    },
+                    {
+                        "$ref": "#/parameters/offset"
+                    },
+                    {
+                        "$ref": "#/parameters/limit"
+                    },
+                    {
+                        "$ref": "#/parameters/preferCount"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "items": {
+                                "$ref": "#/definitions/packages"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    "206": {
+                        "description": "Partial Content"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "packages"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/body.packages"
+                    },
+                    {
+                        "$ref": "#/parameters/select"
+                    },
+                    {
+                        "$ref": "#/parameters/preferPost"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "packages"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/rowFilter.packages.id"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.packages.name"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.packages.description"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.packages.maintainers"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.packages.project_url"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.packages.doc_url"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.packages.latest_version"
+                    },
+                    {
+                        "$ref": "#/parameters/preferReturn"
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "packages"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/rowFilter.packages.id"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.packages.name"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.packages.description"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.packages.maintainers"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.packages.project_url"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.packages.doc_url"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.packages.latest_version"
+                    },
+                    {
+                        "$ref": "#/parameters/body.packages"
+                    },
+                    {
+                        "$ref": "#/parameters/preferReturn"
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                }
+            }
+        },
+        "/versions": {
+            "get": {
+                "tags": [
+                    "versions"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/rowFilter.versions.id"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.versions.package_id"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.versions.version"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.versions.description"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.versions.readme"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.versions.changelog"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.versions.license"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.versions.published_at"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.versions.storage_url"
+                    },
+                    {
+                        "$ref": "#/parameters/select"
+                    },
+                    {
+                        "$ref": "#/parameters/order"
+                    },
+                    {
+                        "$ref": "#/parameters/range"
+                    },
+                    {
+                        "$ref": "#/parameters/rangeUnit"
+                    },
+                    {
+                        "$ref": "#/parameters/offset"
+                    },
+                    {
+                        "$ref": "#/parameters/limit"
+                    },
+                    {
+                        "$ref": "#/parameters/preferCount"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "items": {
+                                "$ref": "#/definitions/versions"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    "206": {
+                        "description": "Partial Content"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "versions"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/body.versions"
+                    },
+                    {
+                        "$ref": "#/parameters/select"
+                    },
+                    {
+                        "$ref": "#/parameters/preferPost"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "versions"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/rowFilter.versions.id"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.versions.package_id"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.versions.version"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.versions.description"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.versions.readme"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.versions.changelog"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.versions.license"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.versions.published_at"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.versions.storage_url"
+                    },
+                    {
+                        "$ref": "#/parameters/preferReturn"
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "versions"
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/rowFilter.versions.id"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.versions.package_id"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.versions.version"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.versions.description"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.versions.readme"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.versions.changelog"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.versions.license"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.versions.published_at"
+                    },
+                    {
+                        "$ref": "#/parameters/rowFilter.versions.storage_url"
+                    },
+                    {
+                        "$ref": "#/parameters/body.versions"
+                    },
+                    {
+                        "$ref": "#/parameters/preferReturn"
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                }
+            }
+        },
+    },
+    "definitions": {
+        "version_members": {
+            "required": [
+                "id",
+                "version_id",
+                "member_id"
+            ],
+            "properties": {
+                "id": {
+                    "default": "extensions.uuid_generate_v4()",
+                    "description": "Note:\nThis is a Primary Key.<pk/>",
+                    "format": "uuid",
+                    "type": "string"
+                },
+                "version_id": {
+                    "description": "Note:\nThis is a Foreign Key to `versions.id`.<fk table='versions' column='id'/>",
+                    "format": "uuid",
+                    "type": "string"
+                },
+                "member_id": {
+                    "description": "Note:\nThis is a Foreign Key to `members.id`.<fk table='members' column='id'/>",
+                    "format": "uuid",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "members": {
+            "required": [
+                "id",
+                "name",
+                "type",
+                "depth"
+            ],
+            "properties": {
+                "id": {
+                    "default": "extensions.uuid_generate_v4()",
+                    "description": "Note:\nThis is a Primary Key.<pk/>",
+                    "format": "uuid",
+                    "type": "string"
+                },
+                "name": {
+                    "format": "text",
+                    "type": "string"
+                },
+                "type": {
+                    "format": "text",
+                    "type": "string"
+                },
+                "parent_name": {
+                    "format": "text",
+                    "type": "string"
+                },
+                "documentation": {
+                    "format": "text",
+                    "type": "string"
+                },
+                "signature": {
+                    "format": "text",
+                    "type": "string"
+                },
+                "parameters": {
+                    "format": "jsonb"
+                },
+                "return": {
+                    "format": "text",
+                    "type": "string"
+                },
+                "access_level": {
+                    "format": "text",
+                    "type": "string"
+                },
+                "depth": {
+                    "format": "integer",
+                    "type": "integer"
+                }
+            },
+            "type": "object"
+        },
+        "packages": {
+            "required": [
+                "id",
+                "name",
+                "description"
+            ],
+            "properties": {
+                "id": {
+                    "default": "extensions.uuid_generate_v4()",
+                    "description": "Note:\nThis is a Primary Key.<pk/>",
+                    "format": "uuid",
+                    "type": "string"
+                },
+                "name": {
+                    "format": "text",
+                    "type": "string"
+                },
+                "description": {
+                    "format": "text",
+                    "type": "string"
+                },
+                "maintainers": {
+                    "format": "jsonb"
+                },
+                "project_url": {
+                    "format": "text",
+                    "type": "string"
+                },
+                "doc_url": {
+                    "format": "text",
+                    "type": "string"
+                },
+                "latest_version": {
+                    "format": "text",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "versions": {
+            "required": [
+                "id",
+                "package_id",
+                "version",
+                "description",
+                "published_at",
+                "storage_url"
+            ],
+            "properties": {
+                "id": {
+                    "default": "extensions.uuid_generate_v4()",
+                    "description": "Note:\nThis is a Primary Key.<pk/>",
+                    "format": "uuid",
+                    "type": "string"
+                },
+                "package_id": {
+                    "description": "Note:\nThis is a Foreign Key to `packages.id`.<fk table='packages' column='id'/>",
+                    "format": "uuid",
+                    "type": "string"
+                },
+                "version": {
+                    "format": "text",
+                    "type": "string"
+                },
+                "description": {
+                    "format": "text",
+                    "type": "string"
+                },
+                "readme": {
+                    "format": "text",
+                    "type": "string"
+                },
+                "changelog": {
+                    "format": "text",
+                    "type": "string"
+                },
+                "license": {
+                    "format": "text",
+                    "type": "string"
+                },
+                "published_at": {
+                    "format": "timestamp with time zone",
+                    "type": "string"
+                },
+                "storage_url": {
+                    "format": "text",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    },
+    "parameters": {
+        "preferParams": {
+            "name": "Prefer",
+            "description": "Preference",
+            "required": false,
+            "enum": [
+                "params=single-object"
+            ],
+            "in": "header",
+            "type": "string"
+        },
+        "preferReturn": {
+            "name": "Prefer",
+            "description": "Preference",
+            "required": false,
+            "enum": [
+                "return=representation",
+                "return=minimal",
+                "return=none"
+            ],
+            "in": "header",
+            "type": "string"
+        },
+        "preferCount": {
+            "name": "Prefer",
+            "description": "Preference",
+            "required": false,
+            "enum": [
+                "count=none"
+            ],
+            "in": "header",
+            "type": "string"
+        },
+        "preferPost": {
+            "name": "Prefer",
+            "description": "Preference",
+            "required": false,
+            "enum": [
+                "return=representation",
+                "return=minimal",
+                "return=none",
+                "resolution=ignore-duplicates",
+                "resolution=merge-duplicates"
+            ],
+            "in": "header",
+            "type": "string"
+        },
+        "select": {
+            "name": "select",
+            "description": "Filtering Columns",
+            "required": false,
+            "in": "query",
+            "type": "string"
+        },
+        "on_conflict": {
+            "name": "on_conflict",
+            "description": "On Conflict",
+            "required": false,
+            "in": "query",
+            "type": "string"
+        },
+        "order": {
+            "name": "order",
+            "description": "Ordering",
+            "required": false,
+            "in": "query",
+            "type": "string"
+        },
+        "range": {
+            "name": "Range",
+            "description": "Limiting and Pagination",
+            "required": false,
+            "in": "header",
+            "type": "string"
+        },
+        "rangeUnit": {
+            "name": "Range-Unit",
+            "description": "Limiting and Pagination",
+            "required": false,
+            "default": "items",
+            "in": "header",
+            "type": "string"
+        },
+        "offset": {
+            "name": "offset",
+            "description": "Limiting and Pagination",
+            "required": false,
+            "in": "query",
+            "type": "string"
+        },
+        "limit": {
+            "name": "limit",
+            "description": "Limiting and Pagination",
+            "required": false,
+            "in": "query",
+            "type": "string"
+        },
+        "body.version_members": {
+            "name": "version_members",
+            "description": "version_members",
+            "required": false,
+            "in": "body",
+            "schema": {
+                "$ref": "#/definitions/version_members"
+            }
+        },
+        "rowFilter.version_members.id": {
+            "name": "id",
+            "required": false,
+            "format": "uuid",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.version_members.version_id": {
+            "name": "version_id",
+            "required": false,
+            "format": "uuid",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.version_members.member_id": {
+            "name": "member_id",
+            "required": false,
+            "format": "uuid",
+            "in": "query",
+            "type": "string"
+        },
+        "body.members": {
+            "name": "members",
+            "description": "members",
+            "required": false,
+            "in": "body",
+            "schema": {
+                "$ref": "#/definitions/members"
+            }
+        },
+        "rowFilter.members.id": {
+            "name": "id",
+            "required": false,
+            "format": "uuid",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.members.name": {
+            "name": "name",
+            "required": false,
+            "format": "text",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.members.type": {
+            "name": "type",
+            "required": false,
+            "format": "text",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.members.parent_name": {
+            "name": "parent_name",
+            "required": false,
+            "format": "text",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.members.documentation": {
+            "name": "documentation",
+            "required": false,
+            "format": "text",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.members.signature": {
+            "name": "signature",
+            "required": false,
+            "format": "text",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.members.parameters": {
+            "name": "parameters",
+            "required": false,
+            "format": "jsonb",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.members.return": {
+            "name": "return",
+            "required": false,
+            "format": "text",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.members.access_level": {
+            "name": "access_level",
+            "required": false,
+            "format": "text",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.members.depth": {
+            "name": "depth",
+            "required": false,
+            "format": "integer",
+            "in": "query",
+            "type": "string"
+        },
+        "body.packages": {
+            "name": "packages",
+            "description": "packages",
+            "required": false,
+            "in": "body",
+            "schema": {
+                "$ref": "#/definitions/packages"
+            }
+        },
+        "rowFilter.packages.id": {
+            "name": "id",
+            "required": false,
+            "format": "uuid",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.packages.name": {
+            "name": "name",
+            "required": false,
+            "format": "text",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.packages.description": {
+            "name": "description",
+            "required": false,
+            "format": "text",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.packages.maintainers": {
+            "name": "maintainers",
+            "required": false,
+            "format": "jsonb",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.packages.project_url": {
+            "name": "project_url",
+            "required": false,
+            "format": "text",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.packages.doc_url": {
+            "name": "doc_url",
+            "required": false,
+            "format": "text",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.packages.latest_version": {
+            "name": "latest_version",
+            "required": false,
+            "format": "text",
+            "in": "query",
+            "type": "string"
+        },
+        "body.subscriptions": {
+            "name": "subscriptions",
+            "description": "subscriptions",
+            "required": false,
+            "in": "body",
+            "schema": {
+                "$ref": "#/definitions/subscriptions"
+            }
+        },
+        "rowFilter.subscriptions.id": {
+            "name": "id",
+            "required": false,
+            "format": "text",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.subscriptions.user_id": {
+            "name": "user_id",
+            "required": false,
+            "format": "uuid",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.subscriptions.status": {
+            "name": "status",
+            "required": false,
+            "format": "public.subscription_status",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.subscriptions.metadata": {
+            "name": "metadata",
+            "required": false,
+            "format": "jsonb",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.subscriptions.price_id": {
+            "name": "price_id",
+            "required": false,
+            "format": "text",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.subscriptions.quantity": {
+            "name": "quantity",
+            "required": false,
+            "format": "integer",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.subscriptions.cancel_at_period_end": {
+            "name": "cancel_at_period_end",
+            "required": false,
+            "format": "boolean",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.subscriptions.created": {
+            "name": "created",
+            "required": false,
+            "format": "timestamp with time zone",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.subscriptions.current_period_start": {
+            "name": "current_period_start",
+            "required": false,
+            "format": "timestamp with time zone",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.subscriptions.current_period_end": {
+            "name": "current_period_end",
+            "required": false,
+            "format": "timestamp with time zone",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.subscriptions.ended_at": {
+            "name": "ended_at",
+            "required": false,
+            "format": "timestamp with time zone",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.subscriptions.cancel_at": {
+            "name": "cancel_at",
+            "required": false,
+            "format": "timestamp with time zone",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.subscriptions.canceled_at": {
+            "name": "canceled_at",
+            "required": false,
+            "format": "timestamp with time zone",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.subscriptions.trial_start": {
+            "name": "trial_start",
+            "required": false,
+            "format": "timestamp with time zone",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.subscriptions.trial_end": {
+            "name": "trial_end",
+            "required": false,
+            "format": "timestamp with time zone",
+            "in": "query",
+            "type": "string"
+        },
+        "body.products": {
+            "name": "products",
+            "description": "products",
+            "required": false,
+            "in": "body",
+            "schema": {
+                "$ref": "#/definitions/products"
+            }
+        },
+        "rowFilter.products.id": {
+            "name": "id",
+            "required": false,
+            "format": "text",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.products.active": {
+            "name": "active",
+            "required": false,
+            "format": "boolean",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.products.name": {
+            "name": "name",
+            "required": false,
+            "format": "text",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.products.description": {
+            "name": "description",
+            "required": false,
+            "format": "text",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.products.image": {
+            "name": "image",
+            "required": false,
+            "format": "text",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.products.metadata": {
+            "name": "metadata",
+            "required": false,
+            "format": "jsonb",
+            "in": "query",
+            "type": "string"
+        },
+        "body.prices": {
+            "name": "prices",
+            "description": "prices",
+            "required": false,
+            "in": "body",
+            "schema": {
+                "$ref": "#/definitions/prices"
+            }
+        },
+        "rowFilter.prices.id": {
+            "name": "id",
+            "required": false,
+            "format": "text",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.prices.product_id": {
+            "name": "product_id",
+            "required": false,
+            "format": "text",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.prices.active": {
+            "name": "active",
+            "required": false,
+            "format": "boolean",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.prices.description": {
+            "name": "description",
+            "required": false,
+            "format": "text",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.prices.unit_amount": {
+            "name": "unit_amount",
+            "required": false,
+            "format": "bigint",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.prices.currency": {
+            "name": "currency",
+            "required": false,
+            "format": "text",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.prices.type": {
+            "name": "type",
+            "required": false,
+            "format": "public.pricing_type",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.prices.interval": {
+            "name": "interval",
+            "required": false,
+            "format": "public.pricing_plan_interval",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.prices.interval_count": {
+            "name": "interval_count",
+            "required": false,
+            "format": "integer",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.prices.trial_period_days": {
+            "name": "trial_period_days",
+            "required": false,
+            "format": "integer",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.prices.metadata": {
+            "name": "metadata",
+            "required": false,
+            "format": "jsonb",
+            "in": "query",
+            "type": "string"
+        },
+        "body.users": {
+            "name": "users",
+            "description": "users",
+            "required": false,
+            "in": "body",
+            "schema": {
+                "$ref": "#/definitions/users"
+            }
+        },
+        "rowFilter.users.id": {
+            "name": "id",
+            "required": false,
+            "format": "uuid",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.users.full_name": {
+            "name": "full_name",
+            "required": false,
+            "format": "text",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.users.avatar_url": {
+            "name": "avatar_url",
+            "required": false,
+            "format": "text",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.users.billing_address": {
+            "name": "billing_address",
+            "required": false,
+            "format": "jsonb",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.users.payment_method": {
+            "name": "payment_method",
+            "required": false,
+            "format": "jsonb",
+            "in": "query",
+            "type": "string"
+        },
+        "body.versions": {
+            "name": "versions",
+            "description": "versions",
+            "required": false,
+            "in": "body",
+            "schema": {
+                "$ref": "#/definitions/versions"
+            }
+        },
+        "rowFilter.versions.id": {
+            "name": "id",
+            "required": false,
+            "format": "uuid",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.versions.package_id": {
+            "name": "package_id",
+            "required": false,
+            "format": "uuid",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.versions.version": {
+            "name": "version",
+            "required": false,
+            "format": "text",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.versions.description": {
+            "name": "description",
+            "required": false,
+            "format": "text",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.versions.readme": {
+            "name": "readme",
+            "required": false,
+            "format": "text",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.versions.changelog": {
+            "name": "changelog",
+            "required": false,
+            "format": "text",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.versions.license": {
+            "name": "license",
+            "required": false,
+            "format": "text",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.versions.published_at": {
+            "name": "published_at",
+            "required": false,
+            "format": "timestamp with time zone",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.versions.storage_url": {
+            "name": "storage_url",
+            "required": false,
+            "format": "text",
+            "in": "query",
+            "type": "string"
+        },
+        "body.customers": {
+            "name": "customers",
+            "description": "customers",
+            "required": false,
+            "in": "body",
+            "schema": {
+                "$ref": "#/definitions/customers"
+            }
+        },
+        "rowFilter.customers.id": {
+            "name": "id",
+            "required": false,
+            "format": "uuid",
+            "in": "query",
+            "type": "string"
+        },
+        "rowFilter.customers.stripe_customer_id": {
+            "name": "stripe_customer_id",
+            "required": false,
+            "format": "text",
+            "in": "query",
+            "type": "string"
+        }
+    },
+    "externalDocs": {
+        "description": "PostgREST Documentation",
+        "url": "https://postgrest.org/en/v10.2/api.html"
+    }
+}
